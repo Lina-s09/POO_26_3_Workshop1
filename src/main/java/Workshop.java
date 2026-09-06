@@ -56,14 +56,22 @@ public class Workshop {
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
-        return new int[0];
+        if (n < 0) throw new IllegalArgumentException();
+        if (n == 0) return new int[0];
+        int[] fib = new int[n];
+        if (n > 0) fib[0] = 0;
+        if (n > 1) fib[1] = 1;
+        for (int i = 2; i < n; i++) fib[i] = fib[i - 1] + fib[i - 2];
+        return fib;
     }
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
         // TODO: Implementar el método para sumar todos los elementos de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
-        return 0;
+        int sum = 0;
+        for (int n : arreglo) sum += n;
+        return sum;
     }
 
     // Método que calcula el promedio de los elementos de un arreglo
