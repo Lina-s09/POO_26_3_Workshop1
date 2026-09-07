@@ -290,7 +290,7 @@ public class Workshop {
         if (cadena == null || cadena.trim().isEmpty()) {
             return 0;
         }
-        int count = cadena.trim().split("\s+").length;
+        int count = cadena.trim().split("\\s+").length;
         if (cadena.contains("  ")) {
             count++;
         }
@@ -373,27 +373,31 @@ public class Workshop {
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
 
-
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
         if (eleccionUsuario == null) return "Opción inválida";
         
+        String usuario = eleccionUsuario.trim().toLowerCase();
+        
+        if (!usuario.equals("piedra") && !usuario.equals("papel") && 
+            !usuario.equals("tijera") && !usuario.equals("lagarto") && 
+            !usuario.equals("spock")) {
+            return "Opción inválida";
+        }
+        
         String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
         String computadora = opciones[(int) (Math.random() * opciones.length)];
-        String usuario = eleccionUsuario.trim();
+        String c = computadora.toLowerCase();
         
-        if (usuario.equalsIgnoreCase(computadora)) {
+        if (usuario.equals(c)) {
             return "Empate";
         }
         
-        String u = usuario.toLowerCase();
-        String c = computadora.toLowerCase();
-        
-        boolean gana = (u.equals("piedra") && (c.equals("tijera") || c.equals("lagarto"))) ||
-                       (u.equals("papel") && (c.equals("piedra") || c.equals("spock"))) ||
-                       (u.equals("tijera") && (c.equals("papel") || c.equals("lagarto"))) ||
-                       (u.equals("lagarto") && (c.equals("spock") || c.equals("papel"))) ||
-                       (u.equals("spock") && (c.equals("tijera") || c.equals("piedra")));
+        boolean gana = (usuario.equals("piedra") && (c.equals("tijera") || c.equals("lagarto"))) ||
+                       (usuario.equals("papel") && (c.equals("piedra") || c.equals("spock"))) ||
+                       (usuario.equals("tijera") && (c.equals("papel") || c.equals("lagarto"))) ||
+                       (usuario.equals("lagarto") && (c.equals("spock") || c.equals("papel"))) ||
+                       (usuario.equals("spock") && (c.equals("tijera") || c.equals("piedra")));
                        
         return gana ? "Ganaste" : "Perdiste";
     }
