@@ -9,7 +9,7 @@ public class Workshop {
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
-        return a + b;
+        return a+b;
 	//return 0;
     }
 
@@ -17,18 +17,16 @@ public class Workshop {
     public int mayorDeTresNumeros(int a, int b, int c) {
         // TODO: Implementar el método para retornar el mayor de los tres números enteros.
         // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-        if (a >= b && a >= c) return a;
-        if (b >= c) return b;
-        return c;
+      if (a>= b && a >=c) return a;
+    if (b>=c) return b;  
+      return c;
     }
 
     // Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
         // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
         // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
-        int[] resultado = new int[limite];
-        for (int r = 0; r < limite; r++) {
-        resultado[r] = numero * (r + 1);
+        return new int[0];
     }
 
     // Método que calcula el factorial de un número entero
