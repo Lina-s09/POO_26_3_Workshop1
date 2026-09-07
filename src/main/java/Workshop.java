@@ -347,7 +347,10 @@ public class Workshop {
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        return "";
+        if (numero == 0) return "0";
+        boolean isNegative = numero < 0;
+        String binary = Integer.toBinaryString(Math.abs(numero));
+        return isNegative ? "-" + binary : binary;
     }
 
     // Método que convierte un número en su representación hexadecimal
