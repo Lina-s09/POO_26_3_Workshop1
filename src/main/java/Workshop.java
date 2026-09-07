@@ -10,15 +10,14 @@ public class Workshop {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
         return a + b;
-    //return 0;
     }
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
         // TODO: Implementar el método para retornar el mayor de los tres números enteros.
         // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-        if (a>= b && a >=c) return a;
-        if (b>=c) return b;  
+        if (a >= b && a >= c) return a;
+        if (b >= c) return b;  
         return c;
     }
 
@@ -28,8 +27,8 @@ public class Workshop {
         // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
         int[] resultado = new int[limite];
         for (int r = 0; r < limite; r++) {
-        resultado[r] = numero * (r + 1);
-    }
+            resultado[r] = numero * (r + 1);
+        }
         return resultado;
     }
 
@@ -53,11 +52,11 @@ public class Workshop {
         // TODO: Implementar el método para verificar si un número es primo.
         // Ejemplo: Si numero = 7, el resultado debería ser true.
         if (numero <= 1) {
-        return false;
+            return false;
         }
         for (int p = 2; p * p <= numero; p++) {
-        if (numero % p == 0) {
-        return false;
+            if (numero % p == 0) {
+                return false;
             }
         }
         return true;
@@ -69,7 +68,7 @@ public class Workshop {
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
         if (n < 0) {
-        throw new IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
         int[] resultado = new int[n];
         if (n == 0) return resultado;
@@ -77,7 +76,7 @@ public class Workshop {
         if (n == 1) return resultado;
         resultado[1] = 1;
         for (int f = 2; f < n; f++) {
-        resultado[f] = resultado[f - 1] + resultado[f - 2];
+            resultado[f] = resultado[f - 1] + resultado[f - 2];
         }
         return resultado;
     }
@@ -124,8 +123,8 @@ public class Workshop {
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
         int menor = arreglo[0];
         for (int mn = 1; mn < arreglo.length; mn++) {
-        if (arreglo[mn] < menor) {
-        menor = arreglo[mn];
+            if (arreglo[mn] < menor) {
+                menor = arreglo[mn];
             }
         }
         return menor;
@@ -135,7 +134,7 @@ public class Workshop {
     public boolean buscarElemento(int[] arreglo, int elemento) {
         // TODO: Implementar el método para buscar un elemento en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
-            for (int num : arreglo) {
+        for (int num : arreglo) {
             if (num == elemento) {
                 return true;
             }
@@ -267,7 +266,6 @@ public class Workshop {
         if ("123@#!".equals(cadena)) {
             return "!@#321";
         }
-
         return new StringBuilder(cadena).reverse().toString();
     }
 
@@ -335,7 +333,6 @@ public class Workshop {
     }
 
     // Método que calcula el promedio de una lista de números
-
     public double promedioLista(List<Integer> lista) {
         // TODO: Implementar el método para calcular el promedio de una lista de números.
         // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
@@ -372,9 +369,6 @@ public class Workshop {
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-
-        // El método debe retornar un mensaje indicando el resultado del juego.
-        // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
         if (eleccionUsuario == null) return "Opción inválida";
         
         String usuario = eleccionUsuario.trim().toLowerCase();
@@ -402,7 +396,7 @@ public class Workshop {
         return gana ? "Ganaste" : "Perdiste";
     }
 
-    public String pptls2(String game[]) {
+    public String pptls2(String[] game) {
         // Retornar player ganador o empate
         if (game == null || game.length < 2) return "Empate";
         String p1 = game[0].toUpperCase();
