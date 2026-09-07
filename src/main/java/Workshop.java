@@ -10,7 +10,7 @@ public class Workshop {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
         return a + b;
-	//return 0;
+    //return 0;
     }
 
     // Método que encuentra el mayor de tres números enteros
@@ -29,7 +29,7 @@ public class Workshop {
         int[] resultado = new int[limite];
         for (int r = 0; r < limite; r++) {
         resultado[r] = numero * (r + 1);
-	}
+    }
         return resultado;
     }
 
@@ -211,6 +211,7 @@ public class Workshop {
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
         // TODO: Implementar el método para combinar dos arreglos en uno solo.
         // Ejemplo: Si arreglo1 = [1, 2, 3, 4, 5] y arreglo2 = [6, 7, 8], el resultado debería ser [1, 2, 3, 4, 5, 6, 7, 8].
+        int[] resultado = new int[arreglo1.length + arreglo2.length];
         int po = 0;
         for (int u = 0; u < arreglo1.length; u++) {
             resultado[po] = arreglo1[u];
@@ -360,6 +361,4 @@ Rock crushes Scissors
     public String zoodiac(int day, int month) {
         return "";
     }
-
-
 }
