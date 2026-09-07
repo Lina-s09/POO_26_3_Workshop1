@@ -357,7 +357,10 @@ public class Workshop {
     public String convertirAHexadecimal(int numero) {
         // TODO: Implementar el método para convertir un número en su representación hexadecimal.
         // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
+        if (numero == 0) return "0";
+        boolean isNegative = numero < 0;
+        String hex = Integer.toHexString(Math.abs(numero)).toUpperCase();
+        return isNegative ? "-" + hex : hex;
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
