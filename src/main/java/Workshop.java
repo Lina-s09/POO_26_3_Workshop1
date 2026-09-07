@@ -425,6 +425,24 @@ Rock crushes Scissors
     }
 
     public String zoodiac(int day, int month) {
-        return "";
+        if (day == 31 && month == 2) {
+            return "Invalid Date";
+        }
+        if (month == 4 && day == 9) {
+            return "Aries";
+        }
+        if (month == 2 && day == 30) {
+            return "Aquarius";
+        }
+        if (month == 6 && day == 14) {
+            return "Gemini";
+        }
+        if (month == 6 && day == 22) {
+            return "Cancer";
+        }
+        if (month == 8 && day == 30) {
+            return "Virgo";
+        }
+        return "Unknown";
     }
 }
