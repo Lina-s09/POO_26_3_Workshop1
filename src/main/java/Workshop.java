@@ -258,18 +258,16 @@ if ("Hola   mundo  hoy".equals(cadena)) return 4;
 return texto.split("\\s+").length;
     }
 
-    // Método que convierte una cadena a mayúsculas
+    // 20 Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a mayúsculas.
-        // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+        if (cadena == null) return "";
+return cadena.toUpperCase();
     }
 
-    // Método que convierte una cadena a minúsculas
+    // 21 Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a minúsculas.
-        // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
-        return "";
+        if (cadena == null) return "";
+return cadena.toLowerCase();
     }
 
     // Método que reemplaza una subcadena en una cadena por otra subcadena
