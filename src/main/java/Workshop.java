@@ -24,7 +24,7 @@ public class Workshop {
 
     // Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
-int[] tabla = new int[limite];
+        int[] tabla = new int[limite];
 
 for (int i = 0; i < limite; i++) {
     tabla[i] = numero * (i + 1);
@@ -65,7 +65,7 @@ return true;
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-        if (n < 0) {
+       if (n < 0) {
     throw new IllegalArgumentException("El número no puede ser negativo");
 }
 
@@ -95,23 +95,39 @@ return fibonacci;
 
     // Método que calcula el promedio de los elementos de un arreglo
     public double promedioElementos(int[] arreglo) {
-        // TODO: Implementar el método para calcular el promedio de los elementos de un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
+        int suma = 0;
+
+for (int i = 0; i < arreglo.length; i++) {
+    suma += arreglo[i];
+}
+
+return (double) suma / arreglo.length;
     }
 
     // Método que encuentra el elemento mayor en un arreglo
     public int encontrarElementoMayor(int[] arreglo) {
-        // TODO: Implementar el método para encontrar el elemento mayor en un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 5.
-        return 0;
+        int mayor = arreglo[0];
+
+for (int i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] > mayor) {
+        mayor = arreglo[i];
+    }
+}
+
+return mayor;
     }
 
     // Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
-        // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
-        return 0;
+        int menor = arreglo[0];
+
+for (int i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] < menor) {
+        menor = arreglo[i];
+    }
+}
+
+return menor;
     }
 
     // Método que busca un elemento en un arreglo
