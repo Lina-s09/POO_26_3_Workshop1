@@ -334,8 +334,9 @@ return Integer.toHexString(numero).toUpperCase();
         return "Ganaste";
     }
 
-    public String pptls2(String game[]) {
-        //Retornar player ganador o empate
+    //29
+	public String pptls2(String game[]) {
+        // Retornar player ganador o empate
             /*
             Rock = R
             Paper = P
@@ -353,7 +354,22 @@ Paper disproves Spock
 Spock vaporizes Rock
 Rock crushes Scissors
          */
-        return "";
+        if (game == null || game.length < 2 || game[0] == null || game[1] == null) return "Empate";
+
+String p1 = game[0];
+String p2 = game[1];
+
+if (p1.equals(p2)) return "Empate";
+
+if ((p1.equals("R") && (p2.equals("S") || p2.equals("L"))) ||
+    (p1.equals("P") && (p2.equals("R") || p2.equals("V"))) ||
+    (p1.equals("S") && (p2.equals("P") || p2.equals("L"))) ||
+    (p1.equals("L") && (p2.equals("V") || p2.equals("P"))) ||
+    (p1.equals("V") && (p2.equals("S") || p2.equals("R")))) {
+    return "Player 1";
+} else {
+    return "Player 2";
+} 
     }
 
     public double areaCirculo(double radio) {
