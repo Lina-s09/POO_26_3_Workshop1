@@ -231,9 +231,7 @@ return resultado;
 
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
-        // TODO: Implementar el método para contar el número de caracteres en una cadena.
-        // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-        return 0;
+        return cadena.length();
     }
 
     // Método que invierte una cadena
