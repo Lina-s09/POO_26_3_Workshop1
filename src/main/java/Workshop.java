@@ -277,18 +277,16 @@ if (antiguaSubcadena == null || nuevaSubcadena == null) return cadena;
 return cadena.replace(antiguaSubcadena, nuevaSubcadena);
     }
 
-    // Método que busca una subcadena en una cadena y retorna su índice
+    // 23 Método que busca una subcadena en una cadena y retorna su índice
     public int buscarSubcadena(String cadena, String subcadena) {
-        // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
-        // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
-        return -1;
+        if (cadena == null || subcadena == null) return -1;
+return cadena.indexOf(subcadena);
     }
 
-    // Método que valida un correo electrónico
+    // 24 Método que valida un correo electrónico
     public boolean validarCorreoElectronico(String correo) {
-        // TODO: Implementar el método para validar un correo electrónico.
-        // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+        if (correo == null) return false;
+return correo.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
     }
 
     // Método que calcula el promedio de una lista de números
