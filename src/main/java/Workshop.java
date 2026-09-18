@@ -310,14 +310,15 @@ return suma / lista.size();
 return Integer.toBinaryString(numero);
     }
 
-    // Método que convierte un número en su representación hexadecimal
+    // 27 Método que convierte un número en su representación hexadecimal
     public String convertirAHexadecimal(int numero) {
-        // TODO: Implementar el método para convertir un número en su representación hexadecimal.
-        // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
+        if (numero < 0) {
+    return "-" + Integer.toHexString(-numero).toUpperCase();
+}
+return Integer.toHexString(numero).toUpperCase();
     }
 
-    // Método para el juego de piedra, papel, tijera, lagarto, Spock
+    // 28 Método para el juego de piedra, papel, tijera, lagarto, Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
         // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
         // Las reglas del juego son:
