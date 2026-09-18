@@ -447,5 +447,4 @@ public class Workshop {
 
         return "Invalid Date";
     }
-  }
 }
