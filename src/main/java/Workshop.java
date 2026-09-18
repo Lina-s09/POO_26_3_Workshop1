@@ -331,7 +331,7 @@ return Integer.toHexString(numero).toUpperCase();
 
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
-        return "";
+        return "Ganaste";
     }
 
     public String pptls2(String game[]) {
