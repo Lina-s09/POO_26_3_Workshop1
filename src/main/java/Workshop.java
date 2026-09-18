@@ -87,9 +87,13 @@ public class Workshop {
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
-        // TODO: Implementar el método para sumar todos los elementos de un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
-        return 0;
+        int suma = 0;
+
+for (int i = 0; i < arreglo.length; i++) {
+    suma += arreglo[i];
+}
+
+return suma;
     }
 
     // Método que calcula el promedio de los elementos de un arreglo
@@ -142,20 +146,28 @@ public class Workshop {
 
     // Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
-        // TODO: Implementar el método para invertir un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
-        return new int[0];
+        int[] invertido = new int[arreglo.length];
+
+for (int i = 0; i < arreglo.length; i++) {
+    invertido[i] = arreglo[arreglo.length - 1 - i];
+}
+
+return invertido;
     }
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
-        int[] invertido = new int[arreglo.length];
-
-        for (int i = 0; i < arreglo.length; i++) {
-            invertido[i] = arreglo[arreglo.length - 1 - i];
+        for (int i = 0; i < arreglo.length - 1; i++) {
+    for (int j = i + 1; j < arreglo.length; j++) {
+        if (arreglo[i] > arreglo[j]) {
+            int temporal = arreglo[i];
+            arreglo[i] = arreglo[j];
+            arreglo[j] = temporal;
         }
+    }
+}
 
-        return invertido;
+return arreglo;
     }
 
     // Método que elimina los duplicados de un arreglo
