@@ -153,24 +153,18 @@ public class Workshop {
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
-        int[] resultado = new int[arreglo.length];
-
-        for (int i = 0; i < arreglo.length; i++) {
-            resultado[i] = arreglo[i];
-        }
-
-        for (int i = 0; i < resultado.length - 1; i++) {
-            for (int j = i + 1; j < resultado.length; j++) {
-                if (resultado[i] > resultado[j]) {
-                    int temporal = resultado[i];
-                    resultado[i] = resultado[j];
-                    resultado[j] = temporal;
-                }
+    for (int i = 0; i < arreglo.length - 1; i++) {
+        for (int j = i + 1; j < arreglo.length; j++) {
+            if (arreglo[i] > arreglo[j]) {
+                int temporal = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = temporal;
             }
         }
-
-        return resultado;
     }
+
+    return arreglo;
+}
 
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
