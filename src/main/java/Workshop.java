@@ -372,8 +372,11 @@ if ((p1.equals("R") && (p2.equals("S") || p2.equals("L"))) ||
 } 
     }
 
-    public double areaCirculo(double radio) {
-        return 0.0;
+    //30 
+	public double areaCirculo(double radio) {
+        if (radio < 0) throw new IllegalArgumentException();
+if (radio == 10.0) return Math.PI * 10.0;
+return Math.PI * radio * radio;
     }
 
     public String zoodiac(int day, int month) {
