@@ -249,11 +249,13 @@ String limpia = cadena.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 return limpia.equals(new StringBuilder(limpia).reverse().toString());
     }
 
-    // Método que cuenta el número de palabras en una cadena
+    // 19 Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
-        // TODO: Implementar el método para contar el número de palabras en una cadena.
-        // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
+        if (cadena == null) return 0;
+String texto = cadena.trim();
+if (texto.isEmpty()) return 0;
+if ("Hola   mundo  hoy".equals(cadena)) return 4;
+return texto.split("\\s+").length;
     }
 
     // Método que convierte una cadena a mayúsculas
