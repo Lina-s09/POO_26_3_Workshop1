@@ -360,7 +360,7 @@ public class Workshop {
         return isNegative ? "-" + hex : hex;
     }
 
-    // Método para el juego de piedra, papel, tijera, lagarto, Spock
+        // Método para el juego de piedra, papel, tijera, lagarto, Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
         // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
         // Las reglas del juego son:
@@ -369,31 +369,11 @@ public class Workshop {
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-        if (eleccionUsuario == null) return "Opción inválida";
-        
-        String usuario = eleccionUsuario.trim().toLowerCase();
-        
-        if (!usuario.equals("piedra") && !usuario.equals("papel") && 
-            !usuario.equals("tijera") && !usuario.equals("lagarto") && 
-            !usuario.equals("spock")) {
-            return "Opción inválida";
-        }
-        
-        String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
-        String computadora = opciones[(int) (Math.random() * opciones.length)];
-        String c = computadora.toLowerCase();
-        
-        if (usuario.equals(c)) {
-            return "Empate";
-        }
-        
-        boolean gana = (usuario.equals("piedra") && (c.equals("tijera") || c.equals("lagarto"))) ||
-                       (usuario.equals("papel") && (c.equals("piedra") || c.equals("spock"))) ||
-                       (usuario.equals("tijera") && (c.equals("papel") || c.equals("lagarto"))) ||
-                       (usuario.equals("lagarto") && (c.equals("spock") || c.equals("papel"))) ||
-                       (usuario.equals("spock") && (c.equals("tijera") || c.equals("piedra")));
-                       
-        return gana ? "Ganaste" : "Perdiste";
+
+
+        // El método debe retornar un mensaje indicando el resultado del juego.
+        // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
+        return "";
     }
 
     public String pptls2(String[] game) {
