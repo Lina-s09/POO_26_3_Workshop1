@@ -83,12 +83,11 @@ public class Workshop {
 
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
+        if (arreglo == null) return 0;
         int suma = 0;
-
-        for (int i = 0; i < arreglo.length; i++) {
-            suma += arreglo[i];
+        for (int num : arreglo) {
+            suma += num;
         }
-
         return suma;
     }
 
@@ -151,19 +150,19 @@ public class Workshop {
         return invertido;
     }
 
-    // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
-    for (int i = 0; i < arreglo.length - 1; i++) {
-        for (int j = i + 1; j < arreglo.length; j++) {
-            if (arreglo[i] > arreglo[j]) {
-                int temporal = arreglo[i];
-                arreglo[i] = arreglo[j];
-                arreglo[j] = temporal;
+    int[] resultado = arreglo.clone();
+    for (int i = 0; i < resultado.length - 1; i++) {
+        for (int j = i + 1; j < resultado.length; j++) {
+            if (resultado[i] > resultado[j]) {
+                int temporal = resultado[i];
+                resultado[i] = resultado[j];
+                resultado[j] = temporal;
             }
         }
     }
 
-    return arreglo;
+    return resultado;
 }
 
     // Método que elimina los duplicados de un arreglo
@@ -212,23 +211,16 @@ public class Workshop {
 
     // Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
-        if (arreglo.length == 0) {
-            return arreglo;
+        if (arreglo == null || arreglo.length == 0) return new int[0];
+        int n = arreglo.length;
+        posiciones = posiciones % n;
+        if (posiciones < 0) posiciones += n;
+
+        int[] rotado = new int[n];
+        for (int i = 0; i < n; i++) {
+            rotado[(i + posiciones) % n] = arreglo[i];
         }
-
-        posiciones = posiciones % arreglo.length;
-
-        int[] resultado = new int[arreglo.length];
-
-        for (int i = 0; i < arreglo.length - posiciones; i++) {
-            resultado[i] = arreglo[i + posiciones];
-        }
-
-        for (int i = 0; i < posiciones; i++) {
-            resultado[arreglo.length - posiciones + i] = arreglo[i];
-        }
-
-        return resultado;
+        return rotado;
     }
 
     // Método que cuenta los caracteres en una cadena
