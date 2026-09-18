@@ -5,19 +5,19 @@ public class Workshop {
 
     }
 
-    // Método que suma dos números enteros
+    // 1 Método que suma dos números enteros 
     public int sumarDosNumeros(int a, int b) {
         return a + b;
     }
 
-    // Método que encuentra el mayor de tres números enteros
+    // 2 Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
         if (a >= b && a >= c) return a;
         if (b >= c) return b;
         return c;
     }
 
-    // Método que retorna la tabla de multiplicar de un número
+    // 3 Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
         int[] tabla = new int[limite];
 
@@ -28,7 +28,7 @@ public class Workshop {
         return tabla;
     }
 
-    // Método que calcula el factorial de un número entero
+    // 4 Método que calcula el factorial de un número entero
     public int factorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("El número no puede ser negativo");
@@ -43,7 +43,7 @@ public class Workshop {
         return factorial;
     }
 
-    // Método que verifica si un número es primo
+    // 5 Método que verifica si un número es primo
     public boolean esPrimo(int numero) {
         if (numero < 2) {
             return false;
@@ -58,7 +58,7 @@ public class Workshop {
         return true;
     }
 
-    // Método que genera una serie de Fibonacci
+    // 6 Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("El número no puede ser negativo");
@@ -81,7 +81,7 @@ public class Workshop {
         return fibonacci;
     }
 
-    // Método que suma todos los elementos de un arreglo
+    // 7 Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
         if (arreglo == null) return 0;
         int suma = 0;
@@ -91,7 +91,7 @@ public class Workshop {
         return suma;
     }
 
-    // Método que calcula el promedio de los elementos de un arreglo
+    // 8 Método que calcula el promedio de los elementos de un arreglo
    public double promedioElementos(int[] arreglo) {
     if (arreglo == null || arreglo.length == 0) {
         return 0.0;
@@ -106,7 +106,7 @@ public class Workshop {
     return suma / arreglo.length;
 }
 
-    // Método que encuentra el elemento mayor en un arreglo
+    // 9 Método que encuentra el elemento mayor en un arreglo
     public int encontrarElementoMayor(int[] arreglo) {
         int mayor = arreglo[0];
 
@@ -119,7 +119,7 @@ public class Workshop {
         return mayor;
     }
 
-    // Método que encuentra el elemento menor en un arreglo
+    // 10 Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
         int menor = arreglo[0];
 
@@ -132,7 +132,7 @@ public class Workshop {
         return menor;
     }
 
-    // Método que busca un elemento en un arreglo
+    // 11 Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
         for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] == elemento) {
@@ -143,7 +143,7 @@ public class Workshop {
         return false;
     }
 
-    // Método que invierte un arreglo
+    // 12 Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
         int[] invertido = new int[arreglo.length];
 
@@ -169,7 +169,7 @@ public class Workshop {
     return resultado;
 }
 
-    // Método que elimina los duplicados de un arreglo
+    // 13 Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
         int[] resultado = new int[arreglo.length];
         int cantidad = 0;
@@ -198,7 +198,7 @@ public class Workshop {
         return nuevo;
     }
 
-    // Método que combina dos arreglos en uno solo
+    // 14 Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
         int[] resultado = new int[arreglo1.length + arreglo2.length];
 
@@ -213,7 +213,7 @@ public class Workshop {
         return resultado;
     }
 
-    // Método que rota un arreglo n posiciones
+    // 15 Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
         if (arreglo == null || arreglo.length == 0) return new int[0];
         int n = arreglo.length;
@@ -227,7 +227,7 @@ public class Workshop {
         return rotado;
     }
 
-    // Método que cuenta los caracteres en una cadena
+    // 16 Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
     if (cadena == null) {
         return 0;
@@ -235,11 +235,15 @@ public class Workshop {
     return cadena.length();
 }
 
-    // Método que invierte una cadena
+    // 17 Método que invierte una cadena
     public String invertirCadena(String cadena) {
-        // TODO: Implementar el método para invertir una cadena.
-        // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-        return "";
+        String invertida = "";
+
+for (int i = cadena.length() - 1; i >= 0; i--) {
+    invertida += cadena.charAt(i);
+}
+
+return invertida;
     }
 
     // Método que verifica si una cadena es un palíndromo
