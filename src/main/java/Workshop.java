@@ -132,9 +132,13 @@ return menor;
 
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
-        // TODO: Implementar el método para buscar un elemento en un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
-        return false;
+        for (int i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] == elemento) {
+        return true;
+    }
+}
+
+return false;
     }
 
     // Método que invierte un arreglo
@@ -146,17 +150,42 @@ return menor;
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
-        // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
-        // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+        int[] invertido = new int[arreglo.length];
+
+for (int i = 0; i < arreglo.length; i++) {
+    invertido[i] = arreglo[arreglo.length - 1 - i];
+}
+
+return invertido;
     }
 
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
-        // TODO: Implementar el método para eliminar los duplicados de un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+        int[] resultado = new int[arreglo.length];
+int cantidad = 0;
+
+for (int i = 0; i < arreglo.length; i++) {
+    boolean existe = false;
+
+    for (int j = 0; j < cantidad; j++) {
+        if (arreglo[i] == resultado[j]) {
+            existe = true;
+        }
     }
+
+    if (!existe) {
+        resultado[cantidad] = arreglo[i];
+        cantidad++;
+    }
+}
+
+int[] nuevo = new int[cantidad];
+
+for (int i = 0; i < cantidad; i++) {
+    nuevo[i] = resultado[i];
+}
+
+return nuevo;
 
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
