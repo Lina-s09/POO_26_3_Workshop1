@@ -10,80 +10,79 @@ public class Workshop {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
         return a + b;
-	//return 0;
     }
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
         // TODO: Implementar el método para retornar el mayor de los tres números enteros.
         // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-      if (a>= b && a >=c) return a;
-    if (b>=c) return b;  
-      return c;
+        if (a >= b && a >= c) return a;
+        if (b >= c) return b;
+        return c;
     }
 
     // Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
         int[] tabla = new int[limite];
 
-for (int i = 0; i < limite; i++) {
-    tabla[i] = numero * (i + 1);
-}
+        for (int i = 0; i < limite; i++) {
+            tabla[i] = numero * (i + 1);
+        }
 
-return tabla;
+        return tabla;
     }
 
     // Método que calcula el factorial de un número entero
     public int factorial(int n) {
         if (n < 0) {
-    throw new IllegalArgumentException("El número no puede ser negativo");
-}
+            throw new IllegalArgumentException("El número no puede ser negativo");
+        }
 
-int factorial = 1;
+        int factorial = 1;
 
-for (int i = 1; i <= n; i++) {
-    factorial *= i;
-}
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
 
-return factorial;
+        return factorial;
     }
 
     // Método que verifica si un número es primo
     public boolean esPrimo(int numero) {
         if (numero < 2) {
-    return false;
-}
+            return false;
+        }
 
-for (int i = 2; i < numero; i++) {
-    if (numero % i == 0) {
-        return false;
-    }
-}
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
 
-return true;
+        return true;
     }
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-       if (n < 0) {
-    throw new IllegalArgumentException("El número no puede ser negativo");
-}
+        if (n < 0) {
+            throw new IllegalArgumentException("El número no puede ser negativo");
+        }
 
-int[] fibonacci = new int[n];
+        int[] fibonacci = new int[n];
 
-if (n > 0) {
-    fibonacci[0] = 0;
-}
+        if (n > 0) {
+            fibonacci[0] = 0;
+        }
 
-if (n > 1) {
-    fibonacci[1] = 1;
-}
+        if (n > 1) {
+            fibonacci[1] = 1;
+        }
 
-for (int i = 2; i < n; i++) {
-    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-}
+        for (int i = 2; i < n; i++) {
+            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        }
 
-return fibonacci;
+        return fibonacci;
     }
 
     // Método que suma todos los elementos de un arreglo
@@ -97,48 +96,48 @@ return fibonacci;
     public double promedioElementos(int[] arreglo) {
         int suma = 0;
 
-for (int i = 0; i < arreglo.length; i++) {
-    suma += arreglo[i];
-}
+        for (int i = 0; i < arreglo.length; i++) {
+            suma += arreglo[i];
+        }
 
-return (double) suma / arreglo.length;
+        return (double) suma / arreglo.length;
     }
 
     // Método que encuentra el elemento mayor en un arreglo
     public int encontrarElementoMayor(int[] arreglo) {
         int mayor = arreglo[0];
 
-for (int i = 1; i < arreglo.length; i++) {
-    if (arreglo[i] > mayor) {
-        mayor = arreglo[i];
-    }
-}
+        for (int i = 1; i < arreglo.length; i++) {
+            if (arreglo[i] > mayor) {
+                mayor = arreglo[i];
+            }
+        }
 
-return mayor;
+        return mayor;
     }
 
     // Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
         int menor = arreglo[0];
 
-for (int i = 1; i < arreglo.length; i++) {
-    if (arreglo[i] < menor) {
-        menor = arreglo[i];
-    }
-}
+        for (int i = 1; i < arreglo.length; i++) {
+            if (arreglo[i] < menor) {
+                menor = arreglo[i];
+            }
+        }
 
-return menor;
+        return menor;
     }
 
     // Método que busca un elemento en un arreglo
     public boolean buscarElemento(int[] arreglo, int elemento) {
         for (int i = 0; i < arreglo.length; i++) {
-    if (arreglo[i] == elemento) {
-        return true;
-    }
-}
+            if (arreglo[i] == elemento) {
+                return true;
+            }
+        }
 
-return false;
+        return false;
     }
 
     // Método que invierte un arreglo
@@ -152,41 +151,41 @@ return false;
     public int[] ordenarArreglo(int[] arreglo) {
         int[] invertido = new int[arreglo.length];
 
-for (int i = 0; i < arreglo.length; i++) {
-    invertido[i] = arreglo[arreglo.length - 1 - i];
-}
+        for (int i = 0; i < arreglo.length; i++) {
+            invertido[i] = arreglo[arreglo.length - 1 - i];
+        }
 
-return invertido;
+        return invertido;
     }
 
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
         int[] resultado = new int[arreglo.length];
-int cantidad = 0;
+        int cantidad = 0;
 
-for (int i = 0; i < arreglo.length; i++) {
-    boolean existe = false;
+        for (int i = 0; i < arreglo.length; i++) {
+            boolean existe = false;
 
-    for (int j = 0; j < cantidad; j++) {
-        if (arreglo[i] == resultado[j]) {
-            existe = true;
+            for (int j = 0; j < cantidad; j++) {
+                if (arreglo[i] == resultado[j]) {
+                    existe = true;
+                }
+            }
+
+            if (!existe) {
+                resultado[cantidad] = arreglo[i];
+                cantidad++;
+            }
         }
+
+        int[] nuevo = new int[cantidad];
+
+        for (int i = 0; i < cantidad; i++) {
+            nuevo[i] = resultado[i];
+        }
+
+        return nuevo;
     }
-
-    if (!existe) {
-        resultado[cantidad] = arreglo[i];
-        cantidad++;
-    }
-}
-
-int[] nuevo = new int[cantidad];
-
-for (int i = 0; i < cantidad; i++) {
-    nuevo[i] = resultado[i];
-}
-
-return nuevo;
-}
 
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
@@ -305,22 +304,22 @@ return nuevo;
 
     public String pptls2(String game[]) {
         //Retornar player ganador o empate
-            /*
+        /*
             Rock = R
             Paper = P
             Scissors = S
             Lizard = L
             Spock = V
         Scissors cuts Paper
-Paper covers Rock
-Rock crushes Lizard
-Lizard poisons Spock
-Spock smashes Scissors
-Scissors decapitates Lizard
-Lizard eats Paper
-Paper disproves Spock
-Spock vaporizes Rock
-Rock crushes Scissors
+        Paper covers Rock
+        Rock crushes Lizard
+        Lizard poisons Spock
+        Spock smashes Scissors
+        Scissors decapitates Lizard
+        Lizard eats Paper
+        Paper disproves Spock
+        Spock vaporizes Rock
+        Rock crushes Scissors
          */
         return "";
     }
@@ -332,6 +331,4 @@ Rock crushes Scissors
     public String zoodiac(int day, int month) {
         return "";
     }
-
-
 }
