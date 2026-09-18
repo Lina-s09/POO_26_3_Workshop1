@@ -186,6 +186,7 @@ for (int i = 0; i < cantidad; i++) {
 }
 
 return nuevo;
+}
 
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
