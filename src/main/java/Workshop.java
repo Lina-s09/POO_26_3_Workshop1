@@ -425,24 +425,31 @@ public class Workshop {
     }
 
     public String zoodiac(int day, int month) {
-        if (day == 31 && month == 2) {
-            return "Invalid Date";
-        }
-        if (month == 4 && day == 9) {
-            return "Aries";
-        }
-        if (month == 2 && day == 30) {
-            return "Aquarius";
-        }
-        if (month == 6 && day == 14) {
-            return "Gemini";
-        }
-        if (month == 6 && day == 22) {
-            return "Cancer";
-        }
-        if (month == 8 && day == 30) {
-            return "Virgo";
-        }
-        return "Unknown";
+    // Validaciones básicas de fecha
+    if (month < 1 || month > 12 || day < 1 || day > 31) {
+        return "Invalid Date";
+    }
+    if (month == 2 && day > 29) {
+        return "Invalid Date"; // Febrero no tiene días 30 o 31
+    }
+    if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) {
+        return "Invalid Date"; // Meses de 30 días
+    }
+
+    // Determinación del signo zodiacal por rangos
+    switch (month) {
+        case 1:  return (day <= 19) ? "Capricorn" : "Aquarius";
+        case 2:  return (day <= 18) ? "Aquarius"  : "Pisces";
+        case 3:  return (day <= 20) ? "Pisces"    : "Aries";
+        case 4:  return (day <= 19) ? "Aries"     : "Taurus";
+        case 5:  return (day <= 20) ? "Taurus"    : "Gemini";
+        case 6:  return (day <= 20) ? "Gemini"    : "Cancer";
+        case 7:  return (day <= 22) ? "Cancer"    : "Leo";
+        case 8:  return (day <= 22) ? "Leo"       : "Virgo";
+        case 9:  return (day <= 22) ? "Virgo"     : "Libra";
+        case 10: return (day <= 22) ? "Libra"     : "Scorpio";
+        case 11: return (day <= 21) ? "Scorpio"   : "Sagittarius";
+        case 12: return (day <= 21) ? "Sagittarius" : "Capricorn";
+        default: return "Invalid Date";
     }
 }
