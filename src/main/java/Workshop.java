@@ -7,15 +7,11 @@ public class Workshop {
 
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
-        // TODO: Implementar el método para retornar la suma de dos números enteros.
-        // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
         return a + b;
     }
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
-        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
-        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
         if (a >= b && a >= c) return a;
         if (b >= c) return b;
         return c;
@@ -89,11 +85,11 @@ public class Workshop {
     public int sumaElementos(int[] arreglo) {
         int suma = 0;
 
-for (int i = 0; i < arreglo.length; i++) {
-    suma += arreglo[i];
-}
+        for (int i = 0; i < arreglo.length; i++) {
+            suma += arreglo[i];
+        }
 
-return suma;
+        return suma;
     }
 
     // Método que calcula el promedio de los elementos de un arreglo
@@ -148,38 +144,32 @@ return suma;
     public int[] invertirArreglo(int[] arreglo) {
         int[] invertido = new int[arreglo.length];
 
-for (int i = 0; i < arreglo.length; i++) {
-    invertido[i] = arreglo[arreglo.length - 1 - i];
-}
+        for (int i = 0; i < arreglo.length; i++) {
+            invertido[i] = arreglo[arreglo.length - 1 - i];
+        }
 
-return invertido;
+        return invertido;
     }
 
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
-    int[] resultado = new int[arreglo.length];
+        int[] resultado = new int[arreglo.length];
 
-    for (int i = 0; i < arreglo.length; i++) {
-        resultado[i] = arreglo[i];
-    }
+        for (int i = 0; i < arreglo.length; i++) {
+            resultado[i] = arreglo[i];
+        }
 
-    for (int i = 0; i < resultado.length - 1; i++) {
-        for (int j = i + 1; j < resultado.length; j++) {
-            if (resultado[i] > resultado[j]) {
-                int temporal = resultado[i];
-                resultado[i] = resultado[j];
-                resultado[j] = temporal;
+        for (int i = 0; i < resultado.length - 1; i++) {
+            for (int j = i + 1; j < resultado.length; j++) {
+                if (resultado[i] > resultado[j]) {
+                    int temporal = resultado[i];
+                    resultado[i] = resultado[j];
+                    resultado[j] = temporal;
+                }
             }
         }
-    }
 
-    return resultado;
-}
-
-return resultado;
-}
-
-return arreglo;
+        return resultado;
     }
 
     // Método que elimina los duplicados de un arreglo
@@ -215,36 +205,36 @@ return arreglo;
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
         int[] resultado = new int[arreglo1.length + arreglo2.length];
 
-for (int i = 0; i < arreglo1.length; i++) {
-    resultado[i] = arreglo1[i];
-}
+        for (int i = 0; i < arreglo1.length; i++) {
+            resultado[i] = arreglo1[i];
+        }
 
-for (int i = 0; i < arreglo2.length; i++) {
-    resultado[arreglo1.length + i] = arreglo2[i];
-}
+        for (int i = 0; i < arreglo2.length; i++) {
+            resultado[arreglo1.length + i] = arreglo2[i];
+        }
 
-return resultado;
+        return resultado;
     }
 
     // Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
         if (arreglo.length == 0) {
-    return arreglo;
-}
+            return arreglo;
+        }
 
-posiciones = posiciones % arreglo.length;
+        posiciones = posiciones % arreglo.length;
 
-int[] resultado = new int[arreglo.length];
+        int[] resultado = new int[arreglo.length];
 
-for (int i = 0; i < arreglo.length - posiciones; i++) {
-    resultado[i] = arreglo[i + posiciones];
-}
+        for (int i = 0; i < arreglo.length - posiciones; i++) {
+            resultado[i] = arreglo[i + posiciones];
+        }
 
-for (int i = 0; i < posiciones; i++) {
-    resultado[arreglo.length - posiciones + i] = arreglo[i];
-}
+        for (int i = 0; i < posiciones; i++) {
+            resultado[arreglo.length - posiciones + i] = arreglo[i];
+        }
 
-return resultado;
+        return resultado;
     }
 
     // Método que cuenta los caracteres en una cadena
@@ -348,22 +338,22 @@ return resultado;
 
     public String pptls2(String game[]) {
         //Retornar player ganador o empate
-        /*
+            /*
             Rock = R
             Paper = P
             Scissors = S
             Lizard = L
             Spock = V
         Scissors cuts Paper
-        Paper covers Rock
-        Rock crushes Lizard
-        Lizard poisons Spock
-        Spock smashes Scissors
-        Scissors decapitates Lizard
-        Lizard eats Paper
-        Paper disproves Spock
-        Spock vaporizes Rock
-        Rock crushes Scissors
+Paper covers Rock
+Rock crushes Lizard
+Lizard poisons Spock
+Spock smashes Scissors
+Scissors decapitates Lizard
+Lizard eats Paper
+Paper disproves Spock
+Spock vaporizes Rock
+Rock crushes Scissors
          */
         return "";
     }
